@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-type Props = {};
+const Transfer = () => {
+  return (
+    <div>Transfer</div>
+  )
+}
 
-const PaymentTranfer = (props: Props) => {
-  return <div>PaymentTranfer</div>;
-};
-
-export default PaymentTranfer;
+export default Transfer

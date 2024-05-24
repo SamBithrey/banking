@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-type Props = {};
+const TransactionHistory = () => {
+  return (
+    <div>TransactionHistory</div>
+  )
+}
 
-const TransactionHistory = (props: Props) => {
-  return <div>TransactionHistory</div>;
-};
-
-export default TransactionHistory;
+export default TransactionHistory

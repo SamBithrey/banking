@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-type Props = {};
+const MyBanks = () => {
+  return (
+    <div>page</div>
+  )
+}
 
-const MyBanks = (props: Props) => {
-  return <div>MyBanks</div>;
-};
-
-export default MyBanks;
+export default MyBanks

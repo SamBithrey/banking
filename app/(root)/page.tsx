@@ -1,39 +1,39 @@
-import HeaderBox from '@/components/HeaderBox';
+import HeaderBox from '@/components/HeaderBox'
 import RightSidebar from '@/components/RightSidebar';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
+import { getLoggedInUser } from '@/lib/actions/user.actions';
 
-const Home = () => {
-  const loggedIn = {
-    firstName: 'Sam',
-    lastName: 'Bithrey',
-    email: 'sam@mail.com',
-  };
+const Home = async () => {
+  const loggedIn = await getLoggedInUser();
 
   return (
-    <section className='home'>
-      <div className='home-content'>
-        <header className='home-header'>
-          <HeaderBox
-            type='greeting'
-            title='Welcome'
-            user={loggedIn?.firstName || 'Guest'}
-            subtext='Access and manage your account and transactions efficently.'
+    <section className="home">
+      <div className="home-content">
+        <header className="home-header">
+          <HeaderBox 
+            type="greeting"
+            title="Welcome"
+            user={loggedIn?.name || 'Guest'}
+            subtext="Access and manage your account and transactions efficiently."
           />
-          <TotalBalanceBox
+
+          <TotalBalanceBox 
             accounts={[]}
             totalBanks={1}
             totalCurrentBalance={1250.35}
           />
         </header>
+
         RECENT TRANSACTIONS
       </div>
-      <RightSidebar
+
+      <RightSidebar 
         user={loggedIn}
         transactions={[]}
-        banks={[{ currentBalance: 123.45 }, { currentBalance: 123.45 }]}
+        banks={[{ currentBalance: 123.50 }, { currentBalance: 500.50}]}
       />
     </section>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
